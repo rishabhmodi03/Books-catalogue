@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-input');
 
     // Fetch books data from books.json
-    fetch('books.json')
+    fetch('https://rishabhmodi03.github.io/Books-catalogue/books.json')
         .then(response => response.json())
         .then(books => {
             displayBooks(books);
