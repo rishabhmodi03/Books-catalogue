@@ -1,0 +1,16 @@
+[
+    {
+        "name": "The Bhagavad Gita",
+        "preview-url": "previews/bhagavad-gita.pdf",
+        "download-url": "downloads/bhagavad-gita.pdf",
+        "category": "Religion",
+        "tags": ["Hinduism", "Spirituality", "Philosophy"]
+    },
+    {
+        "name": "Geeta Rahasya",
+        "preview-url": "previews/geeta-rahasya.pdf",
+        "download-url": "downloads/geeta-rahasya.pdf",
+        "category": "Religion",
+        "tags": ["Hinduism", "Mysticism", "Spirituality"]
+    }
+]
