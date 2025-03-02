@@ -9,7 +9,7 @@ loader.className = 'loader';
 async function loadBooks() {  
   try {  
     bookGrid.appendChild(loader);  
-    const response = await fetch('../books.json');  
+    const response = await fetch('https://rishabhmodi03.github.io/Books-catalogue/books.json');  
     const books = await response.json();  
     loader.remove();  
     return books;  
