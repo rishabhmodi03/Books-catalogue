@@ -1,0 +1,86 @@
+/* Advanced Hover Effects */  
+@keyframes float {  
+    0%, 100% { transform: translateY(0); }  
+    50% { transform: translateY(-10px); }  
+  }  
+  
+  @keyframes pulse {  
+    0% { transform: scale(1); }  
+    50% { transform: scale(1.05); }  
+    100% { transform: scale(1); }  
+  }  
+  
+  @keyframes fadeIn {  
+    from { opacity: 0; transform: translateY(20px); }  
+    to { opacity: 1; transform: translateY(0); }  
+  }  
+  
+  @keyframes wobble {  
+    0% { transform: rotate(0deg); }  
+    25% { transform: rotate(-5deg); }  
+    75% { transform: rotate(5deg); }  
+    100% { transform: rotate(0deg); }  
+  }  
+  
+  /* Header Parallax Animation */  
+  header.parallax-bg {  
+    perspective: 1px;  
+    overflow-x: hidden;  
+  }  
+  
+  header.parallax-bg .header-content {  
+    animation: float 6s ease-in-out infinite;  
+  }  
+  
+  /* Book Card 3D Hover */  
+  .book-card {  
+    transform-style: preserve-3d;  
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);  
+  }  
+  
+  .book-card:hover {  
+    transform: rotateX(10deg) rotateY(-10deg) translateY(-5px);  
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);  
+  }  
+  
+  .book-card:hover .book-cover {  
+    animation: wobble 0.5s ease;  
+  }  
+  
+  /* Search Bar Focus Animation */  
+  #search-bar:focus {  
+    animation: pulse 0.8s ease;  
+    border-color: var(--accent-color);  
+  }  
+  
+  /* Theme Toggle Spin Animation */  
+  #theme-toggle {  
+    transition: all 0.3s;  
+  }  
+  
+  #theme-toggle.active {  
+    animation: spin 0.5s linear;  
+  }  
+  
+  @keyframes spin {  
+    from { transform: rotate(0deg); }  
+    to { transform: rotate(360deg); }  
+  }  
+  
+  /* Scroll Reveal Animation */  
+  .scroll-reveal {  
+    opacity: 0;  
+    transform: translateY(50px);  
+    animation: fadeIn 1s ease forwards;  
+  }  
+  
+  /* Loading Spinner (for dynamic content) */  
+  .loader {  
+    border: 4px solid var(--glass-bg);  
+    border-left-color: var(--accent-color);  
+    border-radius: 50%;  
+    width: 40px;  
+    height: 40px;  
+    animation: spin 1s linear infinite;  
+    margin: 2rem auto;  
+  }  

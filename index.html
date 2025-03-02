@@ -1,37 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hinduism Books</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/animations.css">
-</head>
-<body>
-    <header>
-        <h1>Hinduism Books</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="search-bar">
-            <input type="text" id="search-input" placeholder="Search for books...">
-            <button id="search-button">Search</button>
-        </section>
-        <section class="book-grid" id="book-grid">
-            <!-- Book cards will be dynamically inserted here -->
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Hinduism Books</p>
-    </footer>
-    <script src="js/main.js"></script>
-    <script src="js/search.js"></script>
-    <script src="js/effects.js"></script>
-</body>
-</html>
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Hinduism Books Archive</title>  
+  <link rel="stylesheet" href="css/styles.css">  
+  <link rel="stylesheet" href="css/animations.css">  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">  
+</head>  
+<body>  
+  <!-- Header with Search Bar -->  
+  <header class="parallax-bg">  
+    <div class="header-content">  
+      <h1>Explore Hinduism's Sacred Texts</h1>  
+      <div class="search-container">  
+        <input type="text" id="search-bar" placeholder="Search books...">  
+        <button id="voice-search"><img src="assets/icons/mic.png" alt="Voice Search"></button>  
+      </div>  
+      <button id="theme-toggle">Toggle Dark Mode</button>  
+    </div>  
+  </header>  
+
+  <!-- Book Grid -->  
+  <main>  
+    <section class="book-grid" id="book-grid">  
+      <!-- Books will be dynamically loaded here -->  
+    </section>  
+  </main>  
+
+  <!-- Footer -->  
+  <footer>  
+    <p>© 2024 Hinduism Books Archive. All rights reserved.</p>  
+  </footer>  
+
+  <!-- Scripts -->  
+  <script src="js/main.js"></script>  
+  <script src="js/search.js"></script>  
+  <script src="js/effects.js"></script>  
+</body>  
+</html>  

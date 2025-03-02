@@ -1,16 +1,51 @@
-[
-    {
-        "name": "The Bhagavad Gita",
-        "preview-url": "previews/bhagavad-gita.pdf",
-        "download-url": "downloads/bhagavad-gita.pdf",
-        "category": "Religion",
-        "tags": ["Hinduism", "Spirituality", "Philosophy"]
-    },
-    {
-        "name": "Geeta Rahasya",
-        "preview-url": "previews/geeta-rahasya.pdf",
-        "download-url": "downloads/geeta-rahasya.pdf",
-        "category": "Religion",
-        "tags": ["Hinduism", "Mysticism", "Spirituality"]
-    }
-]
+[  
+  {  
+    "name": "Bhagavad Gita",  
+    "author": "Vyasa",  
+    "previewUrl": "https://example.com/gita-preview.pdf",  
+    "downloadUrl": "https://example.com/gita-download.pdf",  
+    "keywords": ["Gita", "Krishna", "Dharma", "Yoga", "Philosophy"]  
+  },  
+  {  
+    "name": "Ramayana",  
+    "author": "Valmiki",  
+    "previewUrl": "https://example.com/ramayana-preview.pdf",  
+    "downloadUrl": "https://example.com/ramayana-download.pdf",  
+    "keywords": ["Rama", "Sita", "Ayodhya", "Epic", "Moral"]  
+  },  
+  {  
+    "name": "Upanishads",  
+    "author": "Various Rishis",  
+    "previewUrl": "https://example.com/upanishads-preview.pdf",  
+    "downloadUrl": "https://example.com/upanishads-download.pdf",  
+    "keywords": ["Vedanta", "Brahman", "Meditation", "Spirituality"]  
+  },  
+  {  
+    "name": "Autobiography of a Yogi",  
+    "author": "Paramahansa Yogananda",  
+    "previewUrl": "https://example.com/yogananda-preview.pdf",  
+    "downloadUrl": "https://example.com/yogananda-download.pdf",  
+    "keywords": ["Yoga", "Kriya", "Spiritual Journey", "Modern"]  
+  },  
+  {  
+    "name": "The Complete Works of Swami Vivekananda",  
+    "author": "Swami Vivekananda",  
+    "previewUrl": "https://example.com/vivekananda-preview.pdf",  
+    "downloadUrl": "https://example.com/vivekananda-download.pdf",  
+    "keywords": ["Vedanta", "Lectures", "Modern Hinduism", "Inspiration"]  
+  },  
+  {  
+    "name": "Mantra Pushpam",  
+    "author": "Traditional",  
+    "previewUrl": "https://example.com/mantra-preview.pdf",  
+    "downloadUrl": "https://example.com/mantra-download.pdf",  
+    "keywords": ["Mantras", "Worship", "Rituals", "Sanskrit"]  
+  },  
+  {  
+    "name": "Hindu Gods and Goddesses",  
+    "author": "David Kinsley",  
+    "previewUrl": "https://example.com/gods-preview.pdf",  
+    "downloadUrl": "https://example.com/gods-download.pdf",  
+    "keywords": ["Deities", "Mythology", "Symbolism", "Art"]  
+  }  
+]  
