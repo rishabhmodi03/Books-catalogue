@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             viewBtn.className = 'view-btn';
             viewBtn.textContent = 'View Online';
             viewBtn.onclick = () => {
-                window.open(book.url, '_blank');
+                window.open(`pdf-viewer.html?url=${encodeURIComponent(book.url)}`, '_blank');
             };
 
             buttonsContainer.appendChild(downloadBtn);

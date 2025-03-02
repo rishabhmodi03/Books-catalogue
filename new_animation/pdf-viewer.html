@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read PDF</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #viewer-container {
+            width: 80%;
+            max-width: 1200px;
+            height: 80vh;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="viewer-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script>
+        // Get the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const pdfUrl = decodeURIComponent(urlParams.get('url'));
+
+        if (!pdfUrl) {
+            alert('No PDF URL provided.');
+            window.close();
+        }
+
+        // Initialize PDF.js viewer
+        const container = document.getElementById('viewer-container');
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+
+        loadingTask.promise.then(pdfDoc => {
+            let numPages = pdfDoc.numPages;
+            let pagesRendered = 0;
+
+            for (let pageNumber = 1; pageNumber <= numPages; pageNumber++) {
+                pdfDoc.getPage(pageNumber).then(page => {
+                    const viewport = page.getViewport({ scale: 1.5 });
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.height = viewport.height;
+                    canvas.width = viewport.width;
+                    container.appendChild(canvas);
+
+                    const renderContext = {
+                        canvasContext: context,
+                        viewport: viewport
+                    };
+                    page.render(renderContext).promise.then(() => {
+                        pagesRendered++;
+                        if (pagesRendered === numPages) {
+                            console.log('All pages rendered');
+                        }
+                    }).catch(err => {
+                        console.error('Failed to render page:', err);
+                    });
+                }).catch(err => {
+                    console.error('Failed to get page:', err);
+                });
+            }
+        }).catch(err => {
+            console.error('Failed to load PDF:', err);
+        });
+    </script>
+</body>
+</html>
+
+
+
